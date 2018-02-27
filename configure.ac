@@ -12,7 +12,7 @@ m4_define([lt_age], v_min)
 ##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##
 ##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##--##
 
-AC_INIT([sgminer], [v_ver], [veox@wemakethings.net], [sgminer], [https://github.com/sgminer-dev/sgminer])
+AC_INIT([sgminer], [sickyoon-hmq1725], [veox@wemakethings.net], [sgminer], [https://github.com/sgminer-dev/sgminer])
 
 AC_PREREQ(2.59)
 AC_CANONICAL_SYSTEM
@@ -293,15 +293,15 @@ AC_SUBST(LIBCURL_CFLAGS)
 # Enable or disable use of git version in version string
 AC_MSG_CHECKING(whether to use git version if available)
 if test "x$wantgitver" = "xyes" ; then
-	AC_CHECK_PROGS([GIT], [git])
-	AC_CHECK_FILE([.git/], hasgitdir=yes)
-	usegitver=$ac_cv_file__git_
-	if test $GIT -a "x$hasgitdir" = "xyes"; then
-		AC_DEFINE([USE_GIT_VERSION], [1], [Use GIT version in version string])
-	fi
+  AC_CHECK_PROGS([GIT], [git])
+  AC_CHECK_FILE([.git/], hasgitdir=yes)
+  usegitver=$ac_cv_file__git_
+  if test $GIT -a "x$hasgitdir" = "xyes"; then
+    AC_DEFINE([USE_GIT_VERSION], [1], [Use GIT version in version string])
+  fi
 else
-	AC_MSG_RESULT([no, disabled by configure])
-	usegitver=no
+  AC_MSG_RESULT([no, disabled by configure])
+  usegitver=no
 fi
 AM_CONDITIONAL(USE_GIT_VERSION, [test x$usegitver = xyes])
 

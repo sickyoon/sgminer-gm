@@ -58,6 +58,7 @@ sgminer_SOURCES += algorithm/scrypt.c algorithm/scrypt.h
 sgminer_SOURCES += algorithm/darkcoin.c algorithm/darkcoin.h
 sgminer_SOURCES += algorithm/qubitcoin.c algorithm/qubitcoin.h
 sgminer_SOURCES += algorithm/quarkcoin.c algorithm/quarkcoin.h
+sgminer_SOURCES += algorithm/hmq1725.c algorithm/hmq1725.h
 sgminer_SOURCES += algorithm/myriadcoin-groestl.c algorithm/myriadcoin-groestl.h
 sgminer_SOURCES += algorithm/fuguecoin.c algorithm/fuguecoin.h
 sgminer_SOURCES += algorithm/inkcoin.c algorithm/inkcoin.h
